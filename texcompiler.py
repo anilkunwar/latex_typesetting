@@ -152,9 +152,16 @@ st.markdown("""
 3. Ensure `main.tex` is included in the ZIP (can be in a subdirectory) and is a simple LaTeX file without complex dependencies (e.g., custom .sty or .bib files).
 4. Click the "Compile LaTeX" button to generate the PDF using PyLaTeX.
 5. Download the PDF or view it in the preview section.
-6. Install required dependencies:
-   - `pip install streamlit pylatex`
-   - `sudo apt-get install texlive` (minimal LaTeX distribution for pdflatex).
+6. For Streamlit Cloud deployment, include the following files in your GitHub repository:
+   - `requirements.txt`:
+     ```
+     streamlit
+     pylatex
+     ```
+   - `packages.txt`:
+     ```
+     texlive
+     ```
 7. Example `main.tex`:
    ```latex
    \\documentclass[a4paper,12pt]{article}
